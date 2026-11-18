@@ -20,7 +20,7 @@ public class BairroController {
 
     private final BairroDAO bairroDAO;
     private final ModelMapper modelMapper;
-
+8
     public BairroController(BairroDAO bairroDAO, ModelMapper modelMapper) {
         this.bairroDAO = bairroDAO;
         this.modelMapper = modelMapper;
