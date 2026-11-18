@@ -34,11 +34,10 @@ public class BairroController {
         return ResponseEntity.ok(lista);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<BairroDTO> buscarPorId(@PathVariable Long id) {
-        Bairro bairro = bairroDAO.buscarPorId(id)
-                .orElseThrow(() -> new RecursoNaoEncontradoException("Bairro nao encontrado para o ID: " + id));
-        return ResponseEntity.ok(modelMapper.map(bairro, BairroDTO.class));
+    @GetMapping("/health")
+public ResponseEntity<String> health() {
+    return ResponseEntity.ok("OK");
+});
     }
 
     @PostMapping
